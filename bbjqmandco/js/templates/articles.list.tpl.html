@@ -1,0 +1,13 @@
+<ul id="articles-list" data-role="listview" data-divider-theme="a" data-inset="false">
+
+    <li data-role="list-divider" role="heading">
+        Articles
+    </li>
+    <% _.each(articles, function(article){ %>
+    <li data-theme="d">
+        <a href="#page_<%= article.id %>" data-transition="slide">
+            <%= article.title %>
+        </a>
+    </li>
+    <%});%>
+</ul>

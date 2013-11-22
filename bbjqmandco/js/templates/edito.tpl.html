@@ -1,0 +1,16 @@
+<% _.each(editos, function(edito){ %>
+<h1 id="mag-title">
+    <%= edito.title %>
+</h1>
+<div style=" text-align:center" data-controltype="image" data-cid="image1">
+    <img style="width: 200px; height: 200px" src="<%= edito.img %>">
+</div>
+<div id="edito-content" data-controltype="textblock">
+    <p>
+      <span style="font-family: 'book antiqua', palatino;">
+        <%= edito.content %>
+      </span>
+    </p>
+</div>
+<%});%>
+

@@ -1,0 +1,24 @@
+<% _.each(articles, function(article){ %>
+    <div data-role="page" data-control-title="Article_<%= article.id %>" id="page_<%= article.id %>">
+        <div id="article_<%= article.id %>-bar" data-theme="a" data-role="header" data-position="fixed">
+            <a id="home_<%= article.id %>" data-role="button" data-direction="reverse" data-transition="slide"
+               data-theme="c" href="#home" data-icon="home" data-iconpos="left" class="ui-btn-left">
+                Mag
+            </a>
+            <h3 id="article_<%= article.id %>-bar-title">
+                Reader ...
+            </h3>
+        </div>
+        <div data-role="content">
+            <h4>
+                <%= article.author %>
+            </h4>
+            <div data-controltype="textblock">
+                Source : <%= article.fileContent %><hr>
+            </div>
+            <div id="article_<%= article.id %>-content" data-controltype="htmlblock">
+                <%= article.content %>
+            </div>
+        </div>
+    </div>
+<%});%>
